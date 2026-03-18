@@ -29,4 +29,4 @@ Intercept uses a multi-layered fallback architecture to bypass these restriction
 - **Audio Decoding**: Pure `AudioRecord` PCM 16-bit 16000Hz WAV mixing
 
 ## 📄 License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the GNU General Public License v3.0 (GPL-3.0) - see the [LICENSE](LICENSE) file for details.
