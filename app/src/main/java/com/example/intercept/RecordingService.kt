@@ -11,6 +11,7 @@ import android.media.AudioFormat
 import android.media.AudioPlaybackCaptureConfiguration
 import android.media.AudioRecord
 import android.media.MediaRecorder
+import android.media.audiofx.AutomaticGainControl
 import android.os.Build
 import android.os.IBinder
 import android.util.Log
@@ -253,6 +254,15 @@ class RecordingService : Service() {
                 val record = AudioRecord(source, SAMPLE_RATE, CHANNEL_CONFIG, AUDIO_FORMAT, bufferSize)
                 if (record.state == AudioRecord.STATE_INITIALIZED) {
                     Log.d(TAG, "Mic record initialized with source: $name")
+                    try {
+                        if (AutomaticGainControl.isAvailable()) {
+                            val agc = AutomaticGainControl.create(record.audioSessionId)
+                            agc?.enabled = true
+                            Log.d(TAG, "AGC enabled to boost faint remote audio")
+                        }
+                    } catch (e: Exception) {
+                        Log.w(TAG, "Failed to enable AGC: ${e.message}")
+                    }
                     return record
                 } else {
                     Log.w(TAG, "Mic source $name failed to initialize, trying next")
