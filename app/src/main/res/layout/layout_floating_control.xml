@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:background="@android:color/transparent">
+
+    <ImageView
+        android:id="@+id/img_record_toggle"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@android:drawable/btn_default"
+        android:src="@android:drawable/ic_btn_speak_now"
+        android:contentDescription="Record Toggle" />
+
+    <LinearLayout
+        android:id="@+id/ll_controls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:background="#80000000"
+        android:padding="4dp">
+
+        <Button
+            android:id="@+id/btn_float_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btn_float_open_app"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="App"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btn_float_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="X"
+            android:textSize="12sp" />
+    </LinearLayout>
+</LinearLayout>

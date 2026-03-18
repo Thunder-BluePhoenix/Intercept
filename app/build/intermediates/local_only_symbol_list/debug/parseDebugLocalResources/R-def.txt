@@ -1,0 +1,19 @@
+R_DEF: Internal format may change without notice
+local
+id btnRecord
+id btn_float_close
+id btn_float_open_app
+id btn_float_record
+id img_record_toggle
+id ll_controls
+id rvRecordings
+id swFloating
+id tvStatus
+layout activity_main
+layout layout_floating_control
+string accessibility_service_description
+string app_name
+string start_recording
+string stop_recording
+xml accessibility_service_config
+xml file_paths

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Intercept</string>
+    <string name="start_recording">Start Recording</string>
+    <string name="stop_recording">Stop Recording</string>
+    <string name="accessibility_service_description">Intercept requires Accessibility Service to enable Call Recording and prevent Android from muting the background microphone during phone calls. We do not collect or monitor screen contents.</string>
+</resources>
